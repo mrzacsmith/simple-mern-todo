@@ -1,11 +1,19 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import TodoForm from './TodoForm.jsx'
+
 
 const EditTodo = () => {
-  return (
-    <div className='container'>
-      <h2>Edit Todo</h2>
-    </div>
-  )
-}
+  const [todo, setTodo] = useState()
 
+  
+  useEffect(() => {
+    setTodo({
+      text: 'foo'
+    })
+  }, [])
+  
+ 
+
+  return todo ? <TodoForm todo={todo} /> : <div>Loading</div>
+}
 export default EditTodo
