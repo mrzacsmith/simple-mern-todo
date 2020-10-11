@@ -2,7 +2,7 @@ import React from 'react'
 
 const EditTodo = () => {
   return (
-    <div>
+    <div className='container'>
       <h2>Edit Todo</h2>
     </div>
   )
